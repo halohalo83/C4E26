@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- set up mobile device --> <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>car_list</h1>
+    <div class="gridContainer">
+        <div class="header"></div>
+        <div class="lcontent">
+    f_list
+    <h1>FOOD LIST</h1>
+
     {% for f in f_list%}
-        <h3>Hãng xe: {{f.producer}}</h3>
-        <div>Giá thành: {{f.price}} (tỉ VND)</div>
-        <a href="/car/{{f._id}}">detail</a>
+        <h3>{{ f.name }}</h3>
+        <div>{{ f.price }}</div>
+        <a href="/food/{{ f._id }}">Detail</a>
     {% endfor %}
+        </div>
+        <div class="rcontent"></div>
+    </div>
 </body>
 </html>
